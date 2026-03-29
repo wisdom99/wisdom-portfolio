@@ -22,3 +22,5 @@ npm run dev
 - This project uses static export, so it is compatible with GitHub Pages.
 - If you rename the repository, update `repo` in `next.config.mjs`.
 - For a root-domain user site (`username.github.io`), remove the `basePath` and `assetPrefix` logic.
+
+## to start up deployment
