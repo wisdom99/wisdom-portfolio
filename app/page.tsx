@@ -53,6 +53,33 @@ export default function HomePage() {
         </div>
       </Section>
 
+      <Section title="Tech stack">
+        <div className="stack-groups">
+          {[
+            { label: 'Languages', items: ['Java', 'SQL'] },
+            { label: 'Frameworks', items: ['Spring Boot', 'Spring', 'Spring MVC', 'Hibernate'] },
+            { label: 'Messaging', items: ['Apache Kafka', 'RabbitMQ', 'gRPC', 'REST'] },
+            { label: 'Databases', items: ['MySQL', 'MSSQL', 'MongoDB', 'PostgreSQL', 'Redis'] },
+            { label: 'Cloud & Storage', items: ['AWS', 'Azure', 'AWS S3', 'AWS Redshift'] },
+            { label: 'DevOps & CI/CD', items: ['Docker', 'Kubernetes', 'Jenkins', 'Bitbucket', 'Spinnaker'] },
+            { label: 'Security', items: ['Spring Security', 'OAuth2', 'JWT', 'Encryption'] },
+            { label: 'Big Data', items: ['Apache Spark', 'Apache Hadoop', 'Apache Hue', 'Airflow'] },
+            { label: 'AI & ML', items: ['LLM Evaluation', 'Prompt Engineering', 'Vector Databases'] },
+            { label: 'Testing', items: ['JUnit', 'Postman', 'Swagger'] },
+            { label: 'Architecture', items: ['Microservices', 'Event-Driven'] },
+          ].map(({ label, items }) => (
+            <div key={label} className="stack-group">
+              <span className="stack-label">{label}</span>
+              <div className="stack-pills">
+                {items.map((item) => (
+                  <span key={item} className="stack-pill">{item}</span>
+                ))}
+              </div>
+            </div>
+          ))}
+        </div>
+      </Section>
+
       <Section
         title="How I think"
         intro="Most outages are visible in hindsight. The real work is designing systems so they are visible in time."
