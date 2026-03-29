@@ -49,6 +49,16 @@ export default function WorkWithMePage() {
             </a>
             .
           </p>
+          <p>
+            LinkedIn:{' '}
+            <a
+              href="https://www.linkedin.com/in/wisdom-i-9a840a166/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              wisdom-i-9a840a166
+            </a>
+          </p>
         </div>
       </Section>
     </div>
