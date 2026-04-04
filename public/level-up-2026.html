@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Level Up 2026</title>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    :root {
+      --bg: #080808;
+      --surface: #111111;
+      --surface-hover: #181818;
+      --border: #222222;
+      --gold: #f0a500;
+      --gold-light: #f5c153;
+      --gold-dim: rgba(240, 165, 0, 0.12);
+      --text: #e8e8e8;
+      --text-dim: #888888;
+      --white: #ffffff;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background-color: var(--bg);
+      color: var(--text);
+      font-family: 'Space Grotesk', sans-serif;
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+
+    /* ─── HERO ─── */
+    .hero {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 100px 24px 80px;
+      position: relative;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 50%;
+      transform: translateX(-50%);
+      width: 600px;
+      height: 400px;
+      background: radial-gradient(ellipse at center, rgba(240,165,0,0.08) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .hero-label {
+      font-family: 'Space Mono', monospace;
+      font-size: 11px;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 20px;
+      opacity: 0.85;
+    }
+
+    .hero-title {
+      font-size: clamp(42px, 7vw, 80px);
+      font-weight: 700;
+      line-height: 1.05;
+      letter-spacing: -0.03em;
+      color: var(--white);
+      margin-bottom: 20px;
+    }
+
+    .hero-title span {
+      color: var(--gold);
+    }
+
+    .hero-subtitle {
+      font-size: clamp(15px, 2vw, 18px);
+      color: var(--text-dim);
+      max-width: 460px;
+      line-height: 1.6;
+      font-weight: 400;
+    }
+
+    .hero-divider {
+      width: 48px;
+      height: 2px;
+      background: var(--gold);
+      margin: 48px auto 0;
+      opacity: 0.6;
+    }
+
+    /* ─── GRID ─── */
+    .grid-section {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 60px 24px 120px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 1px;
+      background: var(--border);
+      border: 1px solid var(--border);
+    }
+
+    /* ─── CARD ─── */
+    .card {
+      background: var(--surface);
+      padding: 36px 32px;
+      position: relative;
+      overflow: hidden;
+      cursor: default;
+      transition: background 0.3s ease;
+      min-height: 180px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .card::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: var(--gold-dim);
+      opacity: 0;
+      transition: opacity 0.35s ease;
+      pointer-events: none;
+    }
+
+    .card:hover {
+      background: var(--surface-hover);
+    }
+
+    .card:hover::after {
+      opacity: 1;
+    }
+
+    .card-number {
+      font-family: 'Space Mono', monospace;
+      font-size: 11px;
+      color: var(--gold);
+      opacity: 0.5;
+      letter-spacing: 0.15em;
+      margin-bottom: 16px;
+      transition: opacity 0.3s ease;
+    }
+
+    .card:hover .card-number {
+      opacity: 1;
+    }
+
+    .card-name {
+      font-size: 22px;
+      font-weight: 700;
+      color: var(--white);
+      letter-spacing: -0.02em;
+      line-height: 1.2;
+      margin-bottom: 0;
+      transition: color 0.3s ease, transform 0.35s ease;
+      position: relative;
+      z-index: 1;
+    }
+
+    .card:hover .card-name {
+      color: var(--gold-light);
+      transform: translateY(-4px);
+    }
+
+    .card-tagline {
+      font-size: 13.5px;
+      color: var(--text-dim);
+      line-height: 1.65;
+      font-weight: 400;
+      max-height: 0;
+      overflow: hidden;
+      opacity: 0;
+      transform: translateY(6px);
+      transition: max-height 0.4s ease, opacity 0.35s ease 0.05s, transform 0.35s ease 0.05s;
+      position: relative;
+      z-index: 1;
+    }
+
+    .card:hover .card-tagline {
+      max-height: 100px;
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .card-bottom {
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      margin-top: 20px;
+    }
+
+    .card-arrow {
+      font-size: 18px;
+      color: var(--gold);
+      opacity: 0;
+      transform: translateX(-6px);
+      transition: opacity 0.3s ease, transform 0.3s ease;
+      position: relative;
+      z-index: 1;
+    }
+
+    .card:hover .card-arrow {
+      opacity: 1;
+      transform: translateX(0);
+    }
+
+    /* ─── FOOTER ─── */
+    .footer {
+      border-top: 1px solid var(--border);
+      padding: 32px 24px;
+      text-align: center;
+    }
+
+    .footer-text {
+      font-family: 'Space Mono', monospace;
+      font-size: 11px;
+      color: var(--text-dim);
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    .footer-text span {
+      color: var(--gold);
+    }
+
+    /* ─── RESPONSIVE ─── */
+    @media (max-width: 600px) {
+      .hero {
+        padding: 72px 20px 60px;
+      }
+      .grid {
+        grid-template-columns: 1fr;
+      }
+      .card {
+        min-height: 140px;
+      }
+      .card-tagline {
+        max-height: none !important;
+        opacity: 1 !important;
+        transform: none !important;
+        margin-top: 10px;
+      }
+      .card-name {
+        transform: none !important;
+      }
+      .card-arrow {
+        opacity: 1 !important;
+        transform: none !important;
+      }
+    }
+
+    /* ─── SCROLL FADE-IN ─── */
+    .card {
+      animation: fadeUp 0.5s ease both;
+    }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(16px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    .card:nth-child(1)  { animation-delay: 0.03s; }
+    .card:nth-child(2)  { animation-delay: 0.06s; }
+    .card:nth-child(3)  { animation-delay: 0.09s; }
+    .card:nth-child(4)  { animation-delay: 0.12s; }
+    .card:nth-child(5)  { animation-delay: 0.15s; }
+    .card:nth-child(6)  { animation-delay: 0.18s; }
+    .card:nth-child(7)  { animation-delay: 0.21s; }
+    .card:nth-child(8)  { animation-delay: 0.24s; }
+    .card:nth-child(9)  { animation-delay: 0.27s; }
+    .card:nth-child(10) { animation-delay: 0.30s; }
+    .card:nth-child(11) { animation-delay: 0.33s; }
+    .card:nth-child(12) { animation-delay: 0.36s; }
+    .card:nth-child(13) { animation-delay: 0.39s; }
+    .card:nth-child(14) { animation-delay: 0.42s; }
+    .card:nth-child(15) { animation-delay: 0.45s; }
+  </style>
+</head>
+<body>
+
+  <!-- HERO -->
+  <header class="hero">
+    <p class="hero-label">2026 &nbsp;·&nbsp; Core Skills</p>
+    <h1 class="hero-title">Level <span>Up.</span></h1>
+    <p class="hero-subtitle">15 skills that separate the people who talk about growth from the ones who actually do it.</p>
+    <div class="hero-divider"></div>
+  </header>
+
+  <!-- GRID -->
+  <main class="grid-section">
+    <div class="grid">
+
+      <div class="card">
+        <div>
+          <div class="card-number">01</div>
+          <div class="card-name">Proactiveness</div>
+        </div>
+        <div class="card-bottom">
+          <div class="card-tagline">Start before you're asked. Update before you're chased. Finish before the deadline.</div>
+          <div class="card-arrow">→</div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div>
+          <div class="card-number">02</div>
+          <div class="card-name">Work Ethic</div>
+        </div>
+        <div class="card-bottom">
+          <div class="card-tagline">Do the hard stuff without whining. Especially when others coast.</div>
+          <div class="card-arrow">→</div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div>
+          <div class="card-number">03</div>
+          <div class="card-name">Integrity</div>
+        </div>
+        <div class="card-bottom">
+          <div class="card-tagline">Say the uncomfortable thing when it's the right thing.</div>
+          <div class="card-arrow">→</div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div>
+          <div class="card-number">04</div>
+          <div class="card-name">Growth Mindset</div>
+        </div>
+        <div class="card-bottom">
+          <div class="card-tagline">Treat setbacks like data. Treat people like teachers.</div>
+          <div class="card-arrow">→</div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div>
+          <div class="card-number">05</div>
+          <div class="card-name">Reliability</div>
+        </div>
+        <div class="card-bottom">
+          <div class="card-tagline">Deliver when you said you would. Every time.</div>
+          <div class="card-arrow">→</div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div>
+          <div class="card-number">06</div>
+          <div class="card-name">Professionalism</div>
+        </div>
+        <div class="card-bottom">
+          <div class="card-tagline">Show up with the energy, tone, and presence that earns trust.</div>
+          <div class="card-arrow">→</div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div>
+          <div class="card-number">07</div>
+          <div class="card-name">Teamwork</div>
+        </div>
+        <div class="card-bottom">
+          <div class="card-tagline">Drop the ego. Lift the group.</div>
+          <div class="card-arrow">→</div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div>
+          <div class="card-number">08</div>
+          <div class="card-name">Empathy</div>
+        </div>
+        <div class="card-bottom">
+          <div class="card-tagline">Care about people. It shows.</div>
+          <div class="card-arrow">→</div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div>
+          <div class="card-number">09</div>
+          <div class="card-name">Emotional Intelligence</div>
+        </div>
+        <div class="card-bottom">
+          <div class="card-tagline">Know your triggers. Read the room. Respond with intention.</div>
+          <div class="card-arrow">→</div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div>
+          <div class="card-number">10</div>
+          <div class="card-name">Grit</div>
+        </div>
+        <div class="card-bottom">
+          <div class="card-tagline">Push through the dip. Most people quit there.</div>
+          <div class="card-arrow">→</div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div>
+          <div class="card-number">11</div>
+          <div class="card-name">Coachability</div>
+        </div>
+        <div class="card-bottom">
+          <div class="card-tagline">Ask for feedback. Use it. Show the improvement.</div>
+          <div class="card-arrow">→</div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div>
+          <div class="card-number">12</div>
+          <div class="card-name">Adaptability</div>
+        </div>
+        <div class="card-bottom">
+          <div class="card-tagline">Change fast. Help others change too.</div>
+          <div class="card-arrow">→</div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div>
+          <div class="card-number">13</div>
+          <div class="card-name">Precision</div>
+        </div>
+        <div class="card-bottom">
+          <div class="card-tagline">Keep things tight. Keep things organized. Let nothing slip.</div>
+          <div class="card-arrow">→</div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div>
+          <div class="card-number">14</div>
+          <div class="card-name">Ownership</div>
+        </div>
+        <div class="card-bottom">
+          <div class="card-tagline">If it breaks, you fix it. No excuses.</div>
+          <div class="card-arrow">→</div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div>
+          <div class="card-number">15</div>
+          <div class="card-name">Creative Thinking</div>
+        </div>
+        <div class="card-bottom">
+          <div class="card-tagline">Challenge assumptions. Explore weird ideas. Build better solutions.</div>
+          <div class="card-arrow">→</div>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <p class="footer-text">Master the basics. <span>Own the rest.</span></p>
+  </footer>
+
+</body>
+</html>

@@ -88,7 +88,7 @@ export default function HomePage() {
           <CaseStudyCard
             title="Level Up 2026"
             description="15 core skills that separate the people who talk about growth from the ones who actually do it."
-            href="https://wisdom99.github.io/level-up-skill/level-up-2026.html"
+            href="/level-up-2026.html"
           />
         </div>
       </Section>
