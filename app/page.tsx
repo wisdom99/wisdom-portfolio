@@ -81,6 +81,19 @@ export default function HomePage() {
       </Section>
 
       <Section
+        title="Side projects"
+        intro="Things I build outside of work."
+      >
+        <div className="grid">
+          <CaseStudyCard
+            title="Level Up 2026"
+            description="15 core skills that separate the people who talk about growth from the ones who actually do it."
+            href="https://wisdom99.github.io/level-up-skill/level-up-2026.html"
+          />
+        </div>
+      </Section>
+
+      <Section
         title="How I think"
         intro="Most outages are visible in hindsight. The real work is designing systems so they are visible in time."
       >
