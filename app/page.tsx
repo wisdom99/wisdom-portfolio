@@ -94,14 +94,41 @@ export default function HomePage() {
       </Section>
 
       <Section
-        title="How I think"
-        intro="Most outages are visible in hindsight. The real work is designing systems so they are visible in time."
+        title="Thoughts"
+        intro="A few ideas that shape how I think about growth, responsibility, and the pressure that comes with real work."
       >
-        <ul className="list">
-          <li>I care about failure modes, not just happy paths.</li>
-          <li>I treat observability as part of architecture, not an afterthought.</li>
-          <li>I optimize for real-world system behavior, not demo conditions.</li>
-        </ul>
+        <div className="grid">
+          <article className="card">
+            <p className="thought-kicker">Thought 01</p>
+            <h3>Figuring life out often looks like ownership</h3>
+            <p>
+              Sometimes the shift is simple: a deployment is running, and you
+              stay awake because the outcome now belongs to you too.
+            </p>
+          </article>
+          <article className="card">
+            <p className="thought-kicker">Thought 02</p>
+            <h3>People are not watching as closely as we think</h3>
+            <p>
+              A lot of self-consciousness fades once you realize most people
+              are busy solving their own problems and protecting their own
+              image.
+            </p>
+          </article>
+          <article className="card">
+            <p className="thought-kicker">Thought 03</p>
+            <h3>Speaking up is usually less costly than silence</h3>
+            <p>
+              Growth often comes from saying the necessary thing, learning that
+              the world does not end, and adjusting if needed.
+            </p>
+          </article>
+        </div>
+        <div className="actions">
+          <Link className="button" href="/thoughts">
+            Read My Thoughts
+          </Link>
+        </div>
       </Section>
 
       <CTA

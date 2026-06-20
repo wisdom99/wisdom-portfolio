@@ -170,6 +170,10 @@ li {
   padding: 1.25rem;
 }
 
+.card h3 {
+  line-height: 1.2;
+}
+
 .card-link {
   display: block;
   height: 100%;
@@ -228,6 +232,33 @@ li {
   border-radius: 24px;
   border: 1px solid var(--border);
   background: linear-gradient(180deg, rgba(18,22,27,1) 0%, rgba(14,18,22,1) 100%);
+}
+
+.thought-kicker {
+  margin: 0 0 0.85rem;
+  color: var(--accent);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 0.74rem;
+}
+
+.thoughts-list {
+  display: grid;
+  gap: 1rem;
+  margin-top: 1.2rem;
+}
+
+.thought-entry {
+  scroll-margin-top: 7rem;
+}
+
+.thought-summary {
+  color: var(--text);
+  font-size: 1.02rem;
+}
+
+.thought-cta {
+  margin-top: 1rem;
 }
 
 .site-footer {
