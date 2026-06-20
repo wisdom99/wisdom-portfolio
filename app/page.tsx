@@ -1,7 +1,17 @@
+import type { Metadata } from 'next'
 import Link from 'next/link'
 import { Section } from '@/components/section'
 import { CTA } from '@/components/cta'
 import { CaseStudyCard } from '@/components/case-study-card'
+import { createPageMetadata } from '@/lib/metadata'
+import { siteConfig } from '@/lib/site'
+
+export const metadata: Metadata = createPageMetadata({
+  title: 'Backend Systems Portfolio',
+  description:
+    'Portfolio of backend systems, reliability work, case studies, and engineering writing by Wisdom Ifeanyi.',
+  path: '/'
+})
 
 export default function HomePage() {
   return (
@@ -19,9 +29,43 @@ export default function HomePage() {
           <Link className="button primary" href="/case-studies">
             View Case Studies
           </Link>
+          <a
+            className="button"
+            href={siteConfig.github}
+            target="_blank"
+            rel="noreferrer"
+          >
+            View GitHub
+          </a>
+          <a className="button" href={siteConfig.resumeMailto}>
+            Request Resume
+          </a>
           <Link className="button" href="/work-with-me">
             Work With Me
           </Link>
+        </div>
+
+        <div className="proof-grid">
+          <article className="proof-card">
+            <span className="proof-label">Domain</span>
+            <strong>Payments and authentication</strong>
+            <p>Security-sensitive backend work where failure handling matters.</p>
+          </article>
+          <article className="proof-card">
+            <span className="proof-label">Workload</span>
+            <strong>Queue-driven throughput</strong>
+            <p>Kafka, batch processing, and systems that behave under load.</p>
+          </article>
+          <article className="proof-card">
+            <span className="proof-label">Focus</span>
+            <strong>Operational clarity</strong>
+            <p>Observability, tracing, and debugging paths that hold up in production.</p>
+          </article>
+          <article className="proof-card">
+            <span className="proof-label">Approach</span>
+            <strong>Design for failure</strong>
+            <p>Architecture choices shaped by real constraints, not demo conditions.</p>
+          </article>
         </div>
       </section>
 
@@ -43,12 +87,12 @@ export default function HomePage() {
           <CaseStudyCard
             title="Bulk Paycode"
             description="Improved throughput and system behavior under load using Kafka and batch processing patterns."
-            href="/case-studies"
+            href="/case-studies/bulk-paycode"
           />
           <CaseStudyCard
             title="LLM Failure Analysis"
             description="Studied reasoning failure patterns in AI systems, with emphasis on robustness and systematic error propagation."
-            href="/case-studies"
+            href="/case-studies/llm-failure-analysis"
           />
         </div>
       </Section>

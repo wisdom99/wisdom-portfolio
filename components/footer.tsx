@@ -1,3 +1,5 @@
+import { siteConfig } from '@/lib/site'
+
 export function Footer() {
   return (
     <footer className="site-footer">
@@ -5,11 +7,17 @@ export function Footer() {
         <p>© {new Date().getFullYear()} Wisdom Ifeanyi. Built for clarity, reliability, and scale.</p>
         <p>
           Contact:{' '}
-          <a href="mailto:ifeanyiwisdom388@gmail.com">ifeanyiwisdom388@gmail.com</a>
+          <a href={`mailto:${siteConfig.email}`}>{siteConfig.email}</a>
           {' | '}
-          <a href="https://www.linkedin.com/in/wisdom-i-9a840a166/" target="_blank" rel="noreferrer">
+          <a href={siteConfig.linkedin} target="_blank" rel="noreferrer">
             LinkedIn
           </a>
+          {' | '}
+          <a href={siteConfig.github} target="_blank" rel="noreferrer">
+            GitHub
+          </a>
+          {' | '}
+          <a href={siteConfig.resumeMailto}>Request Resume</a>
         </p>
       </div>
     </footer>

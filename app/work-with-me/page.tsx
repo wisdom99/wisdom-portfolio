@@ -1,4 +1,14 @@
+import type { Metadata } from 'next'
 import { Section } from '@/components/section'
+import { createPageMetadata } from '@/lib/metadata'
+import { siteConfig } from '@/lib/site'
+
+export const metadata: Metadata = createPageMetadata({
+  title: 'Work With Me',
+  description:
+    'Ways to work with Wisdom Ifeanyi on backend architecture, reliability, throughput, and systems under operational pressure.',
+  path: '/work-with-me'
+})
 
 export default function WorkWithMePage() {
   return (
@@ -30,6 +40,34 @@ export default function WorkWithMePage() {
           </div>
         </div>
 
+        <div className="grid two">
+          <div className="card">
+            <h3>Ways to work together</h3>
+            <ul className="list">
+              <li>Contract backend delivery</li>
+              <li>Architecture and reliability review</li>
+              <li>Technical advisory engagements</li>
+              <li>Conversation about full-time opportunities</li>
+            </ul>
+          </div>
+          <div className="card">
+            <h3>Quick proof links</h3>
+            <p>
+              <a href={siteConfig.github} target="_blank" rel="noreferrer">
+                View GitHub
+              </a>
+            </p>
+            <p>
+              <a href={siteConfig.linkedin} target="_blank" rel="noreferrer">
+                View LinkedIn
+              </a>
+            </p>
+            <p>
+              <a href={siteConfig.resumeMailto}>Request Resume</a>
+            </p>
+          </div>
+        </div>
+
         <div className="card">
           <h3>Not a fit</h3>
           <p>
@@ -44,15 +82,13 @@ export default function WorkWithMePage() {
           <p>
             If you're working on a system that needs to hold up in
             production, reach out at{' '}
-            <a href="mailto:ifeanyiwisdom388@gmail.com">
-              ifeanyiwisdom388@gmail.com
-            </a>
+            <a href={`mailto:${siteConfig.email}`}>{siteConfig.email}</a>
             .
           </p>
           <p>
             LinkedIn:{' '}
             <a
-              href="https://www.linkedin.com/in/wisdom-i-9a840a166/"
+              href={siteConfig.linkedin}
               target="_blank"
               rel="noreferrer"
             >

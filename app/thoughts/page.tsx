@@ -1,5 +1,14 @@
+import type { Metadata } from 'next'
 import Link from 'next/link'
 import { Section } from '@/components/section'
+import { createPageMetadata } from '@/lib/metadata'
+
+export const metadata: Metadata = createPageMetadata({
+  title: 'Thoughts',
+  description:
+    'Writing on growth, responsibility, engineering judgment, and the mindset behind reliable systems.',
+  path: '/thoughts'
+})
 
 const thoughts = [
   {

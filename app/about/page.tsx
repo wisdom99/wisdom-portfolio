@@ -1,4 +1,13 @@
+import type { Metadata } from 'next'
 import { Section } from '@/components/section'
+import { createPageMetadata } from '@/lib/metadata'
+
+export const metadata: Metadata = createPageMetadata({
+  title: 'About',
+  description:
+    'Background, principles, and focus areas for backend engineer Wisdom Ifeanyi.',
+  path: '/about'
+})
 
 export default function AboutPage() {
   return (
@@ -16,6 +25,11 @@ export default function AboutPage() {
           Today, my work sits at the intersection of software delivery,
           resilience, and technical judgment — building systems that are
           practical, stable, and ready for scale.
+        </p>
+        <p>
+          I am especially drawn to systems with real consequences: payment
+          flows, authentication layers, queue-heavy workflows, and the kind of
+          infrastructure where ambiguity becomes expensive quickly.
         </p>
         <div className="grid two">
           <div className="card">
