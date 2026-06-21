@@ -19,8 +19,8 @@ export default function CaseStudiesPage() {
       >
         <div className="grid">
           <CaseStudyCard
-            title="SafeToken / 3DS Upgrade"
-            description="A high-volume authentication system operating in a security-sensitive payment environment."
+            title="SafeToken Project"
+            description="Interswitch authentication service supporting soft tokens, app tokens, and hard tokens in live payment flows."
             href="/case-studies/safetoken-3ds"
           />
           <CaseStudyCard

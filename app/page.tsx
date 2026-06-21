@@ -80,8 +80,8 @@ export default function HomePage() {
       >
         <div className="grid">
           <CaseStudyCard
-            title="SafeToken / 3DS Upgrade"
-            description="Worked on a security-critical authentication platform, improving resilience, standards alignment, and production visibility."
+            title="SafeToken Project"
+            description="Interswitch authentication service for issuing, delivering, and validating OTPs across payment and identity-verification flows."
             href="/case-studies/safetoken-3ds"
           />
           <CaseStudyCard
