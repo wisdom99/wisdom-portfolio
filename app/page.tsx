@@ -7,7 +7,7 @@ import { createPageMetadata } from '@/lib/metadata'
 import { siteConfig } from '@/lib/site'
 
 export const metadata: Metadata = createPageMetadata({
-  title: 'Forward-Deployed Backend Engineer',
+  title: 'Software/Product Engineer',
   description:
     'Customer-facing backend and AI-assisted engineering across payments, authentication, technical integrations, and high-throughput systems by Wisdom Ifeanyi.',
   path: '/'
@@ -17,7 +17,7 @@ export default function HomePage() {
   return (
     <div className="container">
       <section className="hero">
-        <p className="eyebrow">Forward-Deployed Engineering • Payments • Reliability</p>
+        <p className="eyebrow">Software/Product Engineer • Payments • Reliability</p>
         <h1>I turn complex customer problems into production systems.</h1>
         <p className="lead">
           I work with banks, fintechs, card issuers, payment gateways, and internal

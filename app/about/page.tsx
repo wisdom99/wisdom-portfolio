@@ -5,7 +5,7 @@ import { createPageMetadata } from '@/lib/metadata'
 export const metadata: Metadata = createPageMetadata({
   title: 'About',
   description:
-    'Background, principles, and focus areas for forward-deployed backend engineer Wisdom Ifeanyi.',
+    'Background, principles, and focus areas for software/product engineer Wisdom Ifeanyi.',
   path: '/about'
 })
 
