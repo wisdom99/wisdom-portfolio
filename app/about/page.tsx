@@ -53,6 +53,7 @@ export default function AboutPage() {
               <li>Payments and authentication</li>
               <li>Technical integrations and partner delivery</li>
               <li>Distributed workflows and reliability</li>
+              <li>AI-assisted and agentic engineering workflows</li>
             </ul>
           </div>
         </div>

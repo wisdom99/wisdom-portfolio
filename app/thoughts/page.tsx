@@ -6,11 +6,22 @@ import { createPageMetadata } from '@/lib/metadata'
 export const metadata: Metadata = createPageMetadata({
   title: 'Thoughts',
   description:
-    'Writing on growth, responsibility, engineering judgment, and the mindset behind reliable systems.',
+    'Writing on AI-assisted engineering, growth, responsibility, engineering judgment, and reliable systems.',
   path: '/thoughts'
 })
 
 const thoughts = [
+  {
+    id: 'ai-assisted-engineering',
+    title: 'AI assistance raises the bar for engineering judgment',
+    summary:
+      'Faster code generation makes context, verification, security, and accountability more important — not less.',
+    body: [
+      'Coding agents can explore a system, implement changes, run checks, and document decisions at remarkable speed. But they also amplify the quality of the direction they receive. Weak context and vague constraints can produce plausible-looking mistakes just as quickly.',
+      'I treat AI-assisted development as an engineering workflow: define the outcome, ground the agent in the system, delegate focused work, inspect the reasoning and changes, then verify the behavior independently. The engineer still owns the architecture, security, maintainability, and production result.',
+      'The real advantage is not generating more code. It is shortening the distance between an idea, useful feedback, and a verified solution without giving up judgment.'
+    ]
+  },
   {
     id: 'figuring-life-out',
     title: 'Figuring Life Out',
@@ -49,7 +60,7 @@ export default function ThoughtsPage() {
       <Section
         headingLevel="h1"
         title="Thoughts"
-        intro="A running collection of thoughts on responsibility, growth, engineering, and the mental shifts that happen when life stops feeling theoretical."
+        intro="A running collection of thoughts on AI-assisted engineering, responsibility, growth, and the judgment required to build reliable systems."
       >
         <div className="thoughts-list">
           {thoughts.map((thought) => (

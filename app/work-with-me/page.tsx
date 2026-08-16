@@ -26,6 +26,7 @@ export default function WorkWithMePage() {
               <li>Reliability and failure-mode assessment</li>
               <li>Performance and throughput improvement</li>
               <li>System design for queue-driven workflows</li>
+              <li>AI-assisted engineering workflow design</li>
               <li>Technical advisory for product teams building critical services</li>
             </ul>
           </div>
@@ -37,6 +38,7 @@ export default function WorkWithMePage() {
               <li>Infrastructure-heavy products</li>
               <li>Security-sensitive systems</li>
               <li>High-throughput services</li>
+              <li>Teams adopting agentic development workflows</li>
             </ul>
           </div>
         </div>

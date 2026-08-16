@@ -9,7 +9,7 @@ import { siteConfig } from '@/lib/site'
 export const metadata: Metadata = createPageMetadata({
   title: 'Forward-Deployed Backend Engineer',
   description:
-    'Customer-facing backend engineering across payments, authentication, technical integrations, and high-throughput systems by Wisdom Ifeanyi.',
+    'Customer-facing backend and AI-assisted engineering across payments, authentication, technical integrations, and high-throughput systems by Wisdom Ifeanyi.',
   path: '/'
 })
 
@@ -97,6 +97,39 @@ export default function HomePage() {
         </div>
       </Section>
 
+      <Section
+        title="Agentic engineering workflow"
+        intro="I use coding agents to shorten feedback loops across discovery, implementation, testing, review, and documentation. The agent accelerates the work; I remain accountable for the technical decisions and production outcome."
+      >
+        <div className="grid agent-workflow">
+          <article className="card workflow-step">
+            <span className="workflow-number">01</span>
+            <h3>Frame the outcome</h3>
+            <p>Start with the user problem, success criteria, constraints, and risks.</p>
+          </article>
+          <article className="card workflow-step">
+            <span className="workflow-number">02</span>
+            <h3>Provide context</h3>
+            <p>Ground the agent in the codebase, architecture, conventions, and operating environment.</p>
+          </article>
+          <article className="card workflow-step">
+            <span className="workflow-number">03</span>
+            <h3>Delegate focused work</h3>
+            <p>Use bounded tasks for investigation, implementation, testing, and documentation.</p>
+          </article>
+          <article className="card workflow-step">
+            <span className="workflow-number">04</span>
+            <h3>Review the reasoning</h3>
+            <p>Inspect assumptions, trade-offs, code changes, security, and failure behavior.</p>
+          </article>
+          <article className="card workflow-step">
+            <span className="workflow-number">05</span>
+            <h3>Verify independently</h3>
+            <p>Run relevant checks and confirm the system behaves correctly before shipping.</p>
+          </article>
+        </div>
+      </Section>
+
       <Section title="Tech stack">
         <div className="stack-groups">
           {[
@@ -108,7 +141,18 @@ export default function HomePage() {
             { label: 'DevOps & CI/CD', items: ['Docker', 'Kubernetes', 'Jenkins', 'Bitbucket', 'Spinnaker'] },
             { label: 'Security', items: ['Spring Security', 'OAuth2', 'JWT', 'Encryption'] },
             { label: 'Big Data', items: ['Apache Spark', 'Apache Hadoop', 'Apache Hue', 'Airflow'] },
-            { label: 'AI & ML', items: ['LLM Evaluation', 'Prompt Engineering', 'Vector Databases'] },
+            {
+              label: 'AI & Agentic',
+              items: [
+                'Codex',
+                'AI-Assisted Development',
+                'Agentic Workflows',
+                'Context Engineering',
+                'Prompt Engineering',
+                'LLM Evaluation',
+                'Vector Databases'
+              ]
+            },
             { label: 'Testing', items: ['JUnit', 'Postman', 'Swagger'] },
             { label: 'Architecture', items: ['Microservices', 'Event-Driven'] },
           ].map(({ label, items }) => (
@@ -152,11 +196,10 @@ export default function HomePage() {
           </article>
           <article className="card">
             <p className="thought-kicker">Thought 02</p>
-            <h3>People are not watching as closely as we think</h3>
+            <h3>AI assistance raises the bar for engineering judgment</h3>
             <p>
-              A lot of self-consciousness fades once you realize most people
-              are busy solving their own problems and protecting their own
-              image.
+              Faster code generation makes context, verification, security, and
+              ownership more important — not less.
             </p>
           </article>
           <article className="card">

@@ -2,7 +2,7 @@ export const siteConfig = {
   name: 'Wisdom Ifeanyi',
   title: 'Backend systems, reliability, and software delivery',
   description:
-    'Backend systems, reliability, scale, and software delivery across payments, authentication, and high-throughput workflows.',
+    'Forward-deployed backend and AI-assisted engineering across payments, authentication, technical integrations, and high-throughput workflows.',
   origin: 'https://wisdom99.github.io',
   siteUrl: 'https://wisdom99.github.io/wisdom-portfolio',
   email: 'ifeanyiwisdom388@gmail.com',
