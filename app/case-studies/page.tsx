@@ -6,7 +6,7 @@ import { createPageMetadata } from '@/lib/metadata'
 export const metadata: Metadata = createPageMetadata({
   title: 'Case Studies',
   description:
-    'Selected backend and reliability case studies covering payments, throughput, and AI robustness work.',
+    'Customer-facing backend engineering case studies covering payment authentication, partner integrations, throughput, and reliability.',
   path: '/case-studies'
 })
 
@@ -14,18 +14,19 @@ export default function CaseStudiesPage() {
   return (
     <div className="container page">
       <Section
+        headingLevel="h1"
         title="Case Studies"
-        intro="A selection of systems, problems, and decisions from my work. The focus here is not just what was built, but what had to be solved under real constraints, live traffic, and operational pressure."
+        intro="Customer problems, technical decisions, stakeholder alignment, and production outcomes from payment, authentication, and distributed-system work."
       >
         <div className="grid">
           <CaseStudyCard
             title="SafeToken Project"
-            description="Interswitch authentication service supporting soft tokens, app tokens, and hard tokens in live payment flows."
+            description="Supporting banks, fintechs, card issuers, and gateways integrating token enrolment and OTP authentication flows."
             href="/case-studies/safetoken-3ds"
           />
           <CaseStudyCard
-            title="Bulk Paycode"
-            description="Improving throughput and resilience in a transaction-heavy workflow using Kafka and batch processing."
+            title="Bulk Token Enrollment"
+            description="A Kafka-based redesign that resolved stuck uploads and processed 10,000 token records in under one minute."
             href="/case-studies/bulk-paycode"
           />
           <CaseStudyCard

@@ -7,9 +7,9 @@ import { createPageMetadata } from '@/lib/metadata'
 import { siteConfig } from '@/lib/site'
 
 export const metadata: Metadata = createPageMetadata({
-  title: 'Backend Systems Portfolio',
+  title: 'Forward-Deployed Backend Engineer',
   description:
-    'Portfolio of backend systems, reliability work, case studies, and engineering writing by Wisdom Ifeanyi.',
+    'Customer-facing backend engineering across payments, authentication, technical integrations, and high-throughput systems by Wisdom Ifeanyi.',
   path: '/'
 })
 
@@ -17,12 +17,12 @@ export default function HomePage() {
   return (
     <div className="container">
       <section className="hero">
-        <p className="eyebrow">Backend Systems • Reliability • Scale</p>
-        <h1>I build systems that cannot afford to fail.</h1>
+        <p className="eyebrow">Forward-Deployed Engineering • Payments • Reliability</p>
+        <h1>I turn complex customer problems into production systems.</h1>
         <p className="lead">
-          I design and improve backend platforms across payments, authentication,
-          and high-throughput workflows — with a focus on reliability,
-          observability, and real-world failure.
+          I work with banks, fintechs, card issuers, payment gateways, and internal
+          teams to solve integration and operational problems across payment,
+          authentication, and high-throughput backend platforms.
         </p>
 
         <div className="actions">
@@ -47,31 +47,31 @@ export default function HomePage() {
 
         <div className="proof-grid">
           <article className="proof-card">
-            <span className="proof-label">Domain</span>
-            <strong>Payments and authentication</strong>
-            <p>Security-sensitive backend work where failure handling matters.</p>
+            <span className="proof-label">Customer proximity</span>
+            <strong>Banks, fintechs, and gateways</strong>
+            <p>Direct technical integration support across critical payment flows.</p>
           </article>
           <article className="proof-card">
-            <span className="proof-label">Workload</span>
-            <strong>Queue-driven throughput</strong>
-            <p>Kafka, batch processing, and systems that behave under load.</p>
+            <span className="proof-label">Measured outcome</span>
+            <strong>10,000 records in under 60 seconds</strong>
+            <p>A redesigned Kafka-based bulk token-enrolment workflow.</p>
           </article>
           <article className="proof-card">
-            <span className="proof-label">Focus</span>
-            <strong>Operational clarity</strong>
-            <p>Observability, tracing, and debugging paths that hold up in production.</p>
+            <span className="proof-label">Ownership</span>
+            <strong>Problem through implementation</strong>
+            <p>Investigation, architecture, stakeholder alignment, and delivery.</p>
           </article>
           <article className="proof-card">
-            <span className="proof-label">Approach</span>
-            <strong>Design for failure</strong>
-            <p>Architecture choices shaped by real constraints, not demo conditions.</p>
+            <span className="proof-label">Engineering focus</span>
+            <strong>Reliable systems under pressure</strong>
+            <p>Architecture shaped by customer impact and production constraints.</p>
           </article>
         </div>
       </section>
 
       <Section
-        title="The work behind stable systems"
-        intro="I work on systems where small failures become expensive quickly. My focus is not just shipping features. It is making sure systems behave well when traffic spikes, dependencies slow down, and assumptions break."
+        title="From customer problem to production outcome"
+        intro="My work combines customer-facing technical discovery, backend engineering, and delivery. I translate integration and operational problems into technical decisions, align the people involved, and implement systems that hold up under real production pressure."
       />
 
       <Section
@@ -85,8 +85,8 @@ export default function HomePage() {
             href="/case-studies/safetoken-3ds"
           />
           <CaseStudyCard
-            title="Bulk Paycode"
-            description="Improved throughput and system behavior under load using Kafka and batch processing patterns."
+            title="Bulk Token Enrollment"
+            description="Resolved stuck uploads and redesigned the workflow to process 10,000 token records in under one minute."
             href="/case-studies/bulk-paycode"
           />
           <CaseStudyCard
@@ -176,8 +176,8 @@ export default function HomePage() {
       </Section>
 
       <CTA
-        title="Building something where reliability matters?"
-        text="I work with teams that need strong backend thinking, careful system design, and delivery that holds up in production."
+        title="Have a complex customer or systems problem?"
+        text="I work with teams that need customer-facing technical judgment, strong backend engineering, and delivery that holds up in production."
         href="/work-with-me"
         label="Start a Conversation"
       />

@@ -13,12 +13,13 @@ export default function SafeTokenCaseStudyPage() {
   return (
     <div className="container page">
       <Section
+        headingLevel="h1"
         title="SafeToken Project"
-        intro="An Interswitch authentication service for issuing, delivering, and validating one-time passwords used in payment and identity-verification flows."
+        intro="Customer-facing integration engineering for a payment-authentication platform used by banks, fintechs, card issuers, and payment gateways."
       >
         <div className="stack">
           <div>
-            <h3>Overview</h3>
+            <h2>Overview</h2>
             <p>
               SafeToken supports three authentication methods: service-issued
               OTPs delivered by SMS or email, authenticator-app TOTP
@@ -28,18 +29,30 @@ export default function SafeTokenCaseStudyPage() {
           </div>
 
           <div>
-            <h3>Core workflow</h3>
+            <h2>Customer and transaction flow</h2>
             <ul className="list">
-              <li>A token requestor or aggregator calls the API using an API key</li>
-              <li>SafeToken identifies the customer token and permitted authentication methods</li>
-              <li>It generates, sends, or validates the OTP locally or through an external provider</li>
-              <li>Successful authentication returns transaction status, ECI, and a CAVV-style authentication token</li>
-              <li>Each attempt is logged for auditing, reporting, and billing</li>
+              <li>Banks, fintechs, and card issuers enrol card tokens individually or through bulk uploads</li>
+              <li>A payment gateway initiates validation for a cardholder transaction</li>
+              <li>SafeToken generates an OTP and delivers it through an internal or configured third-party provider</li>
+              <li>The gateway submits the cardholder's OTP to SafeToken for authentication</li>
+              <li>The authenticated transaction proceeds to the issuing bank for authorization</li>
             </ul>
           </div>
 
           <div>
-            <h3>Main capabilities</h3>
+            <h2>My role</h2>
+            <p>
+              As a technical integration engineer, I supported external partners
+              integrating token enrolment, OTP validation, delivery, and
+              authentication flows. I investigated technical issues across partner
+              requests, SafeToken services, and configured providers, then engaged
+              the required product, engineering, and operational stakeholders to
+              implement fixes and reach a production resolution.
+            </p>
+          </div>
+
+          <div>
+            <h2>Main capabilities</h2>
             <ul className="list">
               <li>Token registration, activation, update, and retrieval</li>
               <li>OTP generation, validation, and authentication</li>
@@ -53,7 +66,7 @@ export default function SafeTokenCaseStudyPage() {
           </div>
 
           <div>
-            <h3>Architecture and technology</h3>
+            <h2>Architecture and technology</h2>
             <ul className="list">
               <li>Java 25 and Spring Boot 4 REST application</li>
               <li>Controllers for external APIs and services for token and authentication rules</li>
@@ -68,7 +81,7 @@ export default function SafeTokenCaseStudyPage() {
           </div>
 
           <div>
-            <h3>Why it matters</h3>
+            <h2>Why it matters</h2>
             <p>
               The platform sits in a security-sensitive part of the payments
               stack, so correctness, traceability, delivery reliability, and

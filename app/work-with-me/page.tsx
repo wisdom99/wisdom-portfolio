@@ -14,6 +14,7 @@ export default function WorkWithMePage() {
   return (
     <div className="container page">
       <Section
+        headingLevel="h1"
         title="Work With Me"
         intro="I work with teams building systems where backend quality matters — especially around reliability, scale, operational clarity, and delivery under constraints."
       >

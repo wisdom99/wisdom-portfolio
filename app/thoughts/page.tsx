@@ -47,6 +47,7 @@ export default function ThoughtsPage() {
   return (
     <div className="container page">
       <Section
+        headingLevel="h1"
         title="Thoughts"
         intro="A running collection of thoughts on responsibility, growth, engineering, and the mental shifts that happen when life stops feeling theoretical."
       >

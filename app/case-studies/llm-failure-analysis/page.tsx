@@ -13,6 +13,7 @@ export default function LlmFailureAnalysisCaseStudyPage() {
   return (
     <div className="container page">
       <Section
+        headingLevel="h1"
         title="LLM Failure Analysis"
         intro="A study of systematic reasoning failures and robustness gaps in AI systems."
       >

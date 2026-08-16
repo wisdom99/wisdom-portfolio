@@ -3,9 +3,9 @@ import { Section } from '@/components/section'
 import { createPageMetadata } from '@/lib/metadata'
 
 export const metadata: Metadata = createPageMetadata({
-  title: 'Bulk Paycode',
+  title: 'Bulk Token Enrollment',
   description:
-    'Case study on improving throughput and resilience in a transaction-heavy payout workflow using Kafka and batch processing patterns.',
+    'How a Kafka-based processing redesign resolved stuck bulk token uploads and processed 10,000 records in under one minute.',
   path: '/case-studies/bulk-paycode'
 })
 
@@ -13,53 +13,77 @@ export default function BulkPaycodeCaseStudyPage() {
   return (
     <div className="container page">
       <Section
-        title="Bulk Paycode"
-        intro="Improving throughput and resilience in a transaction-heavy workflow using Kafka and batch processing patterns."
+        headingLevel="h1"
+        title="Scaling Bulk Token Enrollment"
+        intro="Resolving stuck card-token uploads and redesigning the workflow to process 10,000 records in under one minute."
       >
         <div className="stack">
+          <div className="outcome-highlight">
+            <strong className="outcome-value">10,000</strong>
+            <span className="outcome-label">token records per upload processed in under 60 seconds</span>
+          </div>
+
           <div>
-            <h3>Problem</h3>
+            <h2>Customer context</h2>
             <p>
-              The workflow had to handle large payout batches without turning
-              traffic spikes into processing instability, operational confusion,
-              or long recovery cycles.
+              Banks and card-issuing partners used bulk file uploads to enrol
+              large volumes of card tokens on the SafeToken authentication
+              platform.
             </p>
           </div>
 
           <div>
-            <h3>Constraints</h3>
-            <ul className="list">
-              <li>High-volume transaction creation windows</li>
-              <li>Queue backpressure risk during burst periods</li>
-              <li>Need for predictable batch behavior and recovery</li>
-              <li>Operational visibility across asynchronous steps</li>
-            </ul>
-          </div>
-
-          <div>
-            <h3>Approach</h3>
-            <ul className="list">
-              <li>Used Kafka-driven processing to decouple intake from execution pressure</li>
-              <li>Improved batch flow design around retries, sequencing, and failure handling</li>
-              <li>Focused on visibility into where jobs slowed, stalled, or retried excessively</li>
-            </ul>
-          </div>
-
-          <div>
-            <h3>Outcome</h3>
-            <ul className="list">
-              <li>Better throughput behavior under bursty load</li>
-              <li>Cleaner isolation of failed work from healthy batches</li>
-              <li>More predictable recovery and operational debugging</li>
-            </ul>
-          </div>
-
-          <div>
-            <h3>What I learned</h3>
+            <h2>The problem</h2>
             <p>
-              Throughput problems are rarely solved by speed alone. They are
-              usually solved by designing the workflow so pressure is absorbed
-              gracefully and failure does not spread across the whole system.
+              Under heavier workloads, some uploaded files became stuck during
+              processing. This delayed token enrolment, made completion difficult
+              to predict, and limited the progress information available to
+              product owners and customers.
+            </p>
+          </div>
+
+          <div>
+            <h2>My role</h2>
+            <p>
+              I investigated the processing bottleneck, redesigned the bulk-upload
+              architecture, aligned the proposed solution with technical teams and
+              product owners, and implemented the improvements.
+            </p>
+            <p>
+              Product owners managed customer communication while I provided
+              technical findings, implementation updates, risks, and progress
+              reports throughout the work.
+            </p>
+          </div>
+
+          <div>
+            <h2>Technical redesign</h2>
+            <ul className="list">
+              <li>Divided large uploaded files into smaller processing batches</li>
+              <li>Published batches through Kafka to decouple file intake from execution</li>
+              <li>Introduced controlled parallelism so independent batches could run concurrently</li>
+              <li>Isolated failed work so a single batch could not block an entire file</li>
+              <li>Improved progress tracking, retry behavior, and operational visibility</li>
+            </ul>
+          </div>
+
+          <div>
+            <h2>Outcome</h2>
+            <ul className="list">
+              <li>Resolved the stuck-file processing problem</li>
+              <li>Processed 10,000 token records per upload in under one minute</li>
+              <li>Created a more scalable and resilient enrolment workflow</li>
+              <li>Provided clearer progress information for technical teams, product owners, and customers</li>
+            </ul>
+          </div>
+
+          <div>
+            <h2>What this demonstrates</h2>
+            <p>
+              The work combined customer-impact investigation, distributed-system
+              design, stakeholder alignment, implementation ownership, and
+              progress management. It solved the immediate customer problem while
+              addressing the architectural limitation that caused it.
             </p>
           </div>
         </div>

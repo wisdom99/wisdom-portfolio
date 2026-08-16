@@ -5,7 +5,7 @@ import { createPageMetadata } from '@/lib/metadata'
 export const metadata: Metadata = createPageMetadata({
   title: 'About',
   description:
-    'Background, principles, and focus areas for backend engineer Wisdom Ifeanyi.',
+    'Background, principles, and focus areas for forward-deployed backend engineer Wisdom Ifeanyi.',
   path: '/about'
 })
 
@@ -13,32 +13,37 @@ export default function AboutPage() {
   return (
     <div className="container page">
       <Section
-        title="I study how systems fail, then build against it."
-        intro="My background is in backend engineering across payment, authentication, and distributed systems. Over time, that pushed me toward a deeper question: not just how systems work, but how they break under real conditions."
+        headingLevel="h1"
+        title="I work where customer reality meets backend systems."
+        intro="My background is in customer-facing backend engineering across payments, authentication, and distributed systems. I help turn integration problems and operational constraints into production-ready technical solutions."
       >
         <p>
-          That changed the way I build. I think in terms of operational
-          pressure, bottlenecks, hidden coupling, recovery paths, and
-          visibility.
+          I have supported banks, fintechs, card issuers, and payment gateways
+          integrating with security-sensitive authentication platforms. The work
+          requires understanding what a partner is experiencing, tracing that
+          problem across several systems, and coordinating the right people to
+          reach a reliable resolution.
         </p>
         <p>
-          Today, my work sits at the intersection of software delivery,
-          resilience, and technical judgment — building systems that are
-          practical, stable, and ready for scale.
+          My role sits across integration support, product judgment, and backend
+          delivery. I investigate failures, communicate technical findings and
+          progress, align proposed changes with product owners and engineering
+          stakeholders, and implement improvements when the underlying system
+          needs to change.
         </p>
         <p>
-          I am especially drawn to systems with real consequences: payment
-          flows, authentication layers, queue-heavy workflows, and the kind of
-          infrastructure where ambiguity becomes expensive quickly.
+          I am especially drawn to high-value, ambiguous problems: payment flows,
+          authentication layers, partner integrations, queue-heavy workflows, and
+          infrastructure where failures quickly become customer problems.
         </p>
         <div className="grid two">
           <div className="card">
             <h3>Principles</h3>
             <ul className="list">
               <li>Design for failure, not just function</li>
+              <li>Own the outcome, not just the ticket</li>
               <li>Prefer observability over guesswork</li>
-              <li>Treat scale as a systems problem</li>
-              <li>Build with clarity, not noise</li>
+              <li>Communicate clearly across technical boundaries</li>
             </ul>
           </div>
           <div className="card">
@@ -46,8 +51,8 @@ export default function AboutPage() {
             <ul className="list">
               <li>Backend systems</li>
               <li>Payments and authentication</li>
-              <li>Distributed workflows</li>
-              <li>Reliability and failure analysis</li>
+              <li>Technical integrations and partner delivery</li>
+              <li>Distributed workflows and reliability</li>
             </ul>
           </div>
         </div>
