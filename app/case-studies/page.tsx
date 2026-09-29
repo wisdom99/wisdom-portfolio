@@ -16,14 +16,17 @@ export default function CaseStudiesPage() {
       <Section
         headingLevel="h1"
         title="Case Studies"
-        intro="Customer problems, technical decisions, stakeholder alignment, and production outcomes from payment, authentication, and distributed-system work."
+        intro="Selected architecture and delivery work across card payments, transaction authentication and distributed credit workflows."
       >
         <div className="grid">
           <CaseStudyCard
-            title="SafeToken Project"
-            description="Supporting banks, fintechs, card issuers, and gateways integrating token enrolment and OTP authentication flows."
+            title="SafeToken"
+            description="Leading multi-tenant transaction authentication, 3D Secure improvements and issuer integrations."
             href="/case-studies/safetoken-3ds"
           />
+          <CaseStudyCard title="Verve Payment Service" description="Translating gateway requests into Postilion FS messages with retry and idempotency handling." href="/case-studies/verve-payments" />
+          <CaseStudyCard title="Verve Push Service" description="Orchestrating card credits across remittance, refund, P2P and disbursement use cases." href="/case-studies/verve-push" />
+          <CaseStudyCard title="Bulk Credit Disbursement" description="Maker-checker approval, CSV validation, Kafka execution and reconciliation." href="/case-studies/disbursement" />
           <CaseStudyCard
             title="Bulk Token Enrollment"
             description="A Kafka-based redesign that resolved stuck uploads and processed 10,000 token records in under one minute."
