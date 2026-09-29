@@ -5,11 +5,12 @@ import { CTA } from '@/components/cta'
 import { CaseStudyCard } from '@/components/case-study-card'
 import { createPageMetadata } from '@/lib/metadata'
 import { siteConfig } from '@/lib/site'
+import { PortfolioTerminal } from '@/components/portfolio-terminal'
 
 export const metadata: Metadata = createPageMetadata({
-  title: 'Software/Product Engineer',
+  title: 'Senior Software Engineer | Payments and Distributed Systems',
   description:
-    'Customer-facing backend and AI-assisted engineering across payments, authentication, technical integrations, and high-throughput systems by Wisdom Ifeanyi.',
+    'Wisdom Ifeanyi builds Java services for digital payments, transaction authentication, credit disbursement and reliable distributed systems.',
   path: '/'
 })
 
@@ -17,12 +18,12 @@ export default function HomePage() {
   return (
     <div className="container">
       <section className="hero">
-        <p className="eyebrow">Software/Product Engineer • Payments • Reliability</p>
-        <h1>I turn complex customer problems into production systems.</h1>
+        <p className="eyebrow">Senior Software Engineer • Java • Digital Payments</p>
+        <h1>Payment systems built for the real world.</h1>
         <p className="lead">
-          I work with banks, fintechs, card issuers, payment gateways, and internal
-          teams to solve integration and operational problems across payment,
-          authentication, and high-throughput backend platforms.
+          I&apos;m Wisdom Ifeanyi. I build Java services for card payments,
+          transaction authentication and credit disbursement, with a focus on
+          transaction integrity, security and failure recovery.
         </p>
 
         <div className="actions">
@@ -44,6 +45,8 @@ export default function HomePage() {
             Work With Me
           </Link>
         </div>
+
+        <PortfolioTerminal />
 
         <div className="proof-grid">
           <article className="proof-card">
@@ -80,19 +83,19 @@ export default function HomePage() {
       >
         <div className="grid">
           <CaseStudyCard
-            title="SafeToken Project"
-            description="Interswitch authentication service for issuing, delivering, and validating OTPs across payment and identity-verification flows."
+            title="SafeToken"
+            description="Leading multi-tenant transaction authentication, OTP provider integration and issuer-facing improvements."
             href="/case-studies/safetoken-3ds"
           />
           <CaseStudyCard
-            title="Bulk Token Enrollment"
-            description="Resolved stuck uploads and redesigned the workflow to process 10,000 token records in under one minute."
-            href="/case-studies/bulk-paycode"
+            title="Verve Payment Service"
+            description="Gateway to card-processing translation, with retries and idempotency for transaction integrity."
+            href="/case-studies/verve-payments"
           />
           <CaseStudyCard
-            title="LLM Failure Analysis"
-            description="Studied reasoning failure patterns in AI systems, with emphasis on robustness and systematic error propagation."
-            href="/case-studies/llm-failure-analysis"
+            title="Verve Push & Bulk Disbursement"
+            description="Distributed card-credit orchestration and an approval-driven Kafka execution workflow."
+            href="/case-studies/verve-push"
           />
         </div>
       </Section>
