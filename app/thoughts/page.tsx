@@ -62,6 +62,15 @@ export default function ThoughtsPage() {
         title="Thoughts"
         intro="A running collection of thoughts on AI-assisted engineering, responsibility, growth, and the judgment required to build reliable systems."
       >
+        <Link className="card card-link thought-feature" href="/thoughts/secure-coding-with-ai">
+          <p className="thought-kicker">Featured article · Security</p>
+          <h3>Secure coding with AI: where the trust boundaries move</h3>
+          <p>
+            A practical reading of OWASP&apos;s guidance on prompt injection, tool permissions,
+            supply chain risk, independent testing, and human ownership.
+          </p>
+          <span className="text-link">Read the article →</span>
+        </Link>
         <div className="thoughts-list">
           {thoughts.map((thought) => (
             <article key={thought.id} id={thought.id} className="card thought-entry">
