@@ -62,6 +62,12 @@ export default function ThoughtsPage() {
         title="Thoughts"
         intro="A running collection of thoughts on AI-assisted engineering, responsibility, growth, and the judgment required to build reliable systems."
       >
+        <Link className="card card-link thought-feature" href="/thoughts/agentic-sdlc">
+          <p className="thought-kicker">Latest article · Agentic development</p>
+          <h3>The Agentic SDLC: From Writing Code to Guiding Software Delivery</h3>
+          <p>A practical workflow for clear requirements, bounded tasks, independent verification, and accountable software delivery.</p>
+          <span className="text-link">Read the article →</span>
+        </Link>
         <Link className="card card-link thought-feature" href="/thoughts/secure-coding-with-ai">
           <p className="thought-kicker">Featured article · Security</p>
           <h3>Secure coding with AI: where the trust boundaries move</h3>

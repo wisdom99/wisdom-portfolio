@@ -131,6 +131,9 @@ export default function HomePage() {
             <p>Run relevant checks and confirm the system behaves correctly before shipping.</p>
           </article>
         </div>
+        <div className="actions">
+          <Link className="button" href="/thoughts/agentic-sdlc">Read my agentic SDLC process</Link>
+        </div>
       </Section>
 
       <Section title="Tech stack">
