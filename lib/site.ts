@@ -1,8 +1,8 @@
 export const siteConfig = {
   name: 'Wisdom Ifeanyi',
-  title: 'Backend systems, reliability, and software delivery',
+  title: 'Backend Engineering, Payments & Applied AI',
   description:
-    'Software/product and AI-assisted engineering across payments, authentication, technical integrations, and high-throughput workflows.',
+    'Senior backend engineering across payments, authentication and distributed systems, with a growing focus on LLM evaluation and agentic software engineering.',
   origin: 'https://wisdom99.github.io',
   siteUrl: 'https://wisdom99.github.io/wisdom-portfolio',
   email: 'ifeanyiwisdom388@gmail.com',
@@ -13,5 +13,5 @@ export const siteConfig = {
 } as const
 
 export function absoluteUrl(path = '') {
-  return `${siteConfig.siteUrl}${path}`
+  return siteConfig.siteUrl + path
 }

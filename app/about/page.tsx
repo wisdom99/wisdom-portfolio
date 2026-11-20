@@ -5,7 +5,7 @@ import { createPageMetadata } from '@/lib/metadata'
 export const metadata: Metadata = createPageMetadata({
   title: 'About',
   description:
-    'Background, principles, and focus areas for software/product engineer Wisdom Ifeanyi.',
+    'Background, engineering principles and focus areas for senior backend engineer Wisdom Ifeanyi.',
   path: '/about'
 })
 
@@ -14,46 +14,48 @@ export default function AboutPage() {
     <div className="container page">
       <Section
         headingLevel="h1"
-        title="I work where customer reality meets backend systems."
-        intro="My background is in customer-facing backend engineering across payments, authentication, and distributed systems. I help turn integration problems and operational constraints into production-ready technical solutions."
+        title="I build where reliability, product judgment and backend systems meet."
+        intro="My background is in high-trust backend engineering across payments, authentication and distributed systems. I am increasingly applying the same production mindset to AI-enabled products and agentic engineering workflows."
       >
         <p>
-          I have supported banks, fintechs, card issuers, and payment gateways
-          integrating with security-sensitive authentication platforms. The work
-          requires understanding what a partner is experiencing, tracing that
-          problem across several systems, and coordinating the right people to
-          reach a reliable resolution.
+          I build and operate systems where correctness, security and failure
+          recovery matter. My work spans payment infrastructure, transaction
+          authentication, partner integrations, asynchronous workflows and
+          production incident response.
         </p>
         <p>
-          My role sits across integration support, product judgment, and backend
-          delivery. I investigate failures, communicate technical findings and
-          progress, align proposed changes with product owners and engineering
-          stakeholders, and implement improvements when the underlying system
-          needs to change.
+          I am comfortable working from incomplete requirements. I investigate
+          the problem, make the architectural trade-offs visible, align the
+          people involved and carry the implementation through verification and
+          production support.
         </p>
         <p>
-          I am especially drawn to high-value, ambiguous problems: payment flows,
-          authentication layers, partner integrations, queue-heavy workflows, and
-          infrastructure where failures quickly become customer problems.
+          My current AI work focuses on model evaluation, agentic software
+          delivery and the engineering questions that appear when a useful
+          experiment needs to become a dependable product. I am particularly
+          interested in observability, evaluation quality, failure modes,
+          security and clear human accountability around automated systems.
         </p>
         <div className="grid two">
           <div className="card">
-            <h3>Principles</h3>
+            <h3>Engineering principles</h3>
             <ul className="list">
               <li>Design for failure, not just function</li>
-              <li>Own the outcome, not just the ticket</li>
-              <li>Prefer observability over guesswork</li>
-              <li>Communicate clearly across technical boundaries</li>
+              <li>Own the outcome, not just the implementation</li>
+              <li>Prefer evidence and observability over guesswork</li>
+              <li>Keep experimental decisions separate from long-term architecture</li>
+              <li>Use AI to accelerate work without outsourcing engineering judgment</li>
             </ul>
           </div>
           <div className="card">
-            <h3>Focus Areas</h3>
+            <h3>Focus areas</h3>
             <ul className="list">
-              <li>Backend systems</li>
-              <li>Payments and authentication</li>
-              <li>Technical integrations and partner delivery</li>
-              <li>Distributed workflows and reliability</li>
-              <li>AI-assisted and agentic engineering workflows</li>
+              <li>Backend and distributed systems</li>
+              <li>Payments, authentication and high-trust infrastructure</li>
+              <li>System reliability and production operations</li>
+              <li>LLM evaluation and AI workflow engineering</li>
+              <li>Agentic software delivery</li>
+              <li>Zero-to-one technical product development</li>
             </ul>
           </div>
         </div>
